@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="to.css">
+</head>
+<body id="body">
+    <div class ="container">
+    <h2 id="heading">To Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter your task">
+    <button onclick="addTask()">add</button>
+    <ul id="taskList"></ul>
+    
+</div>
+    <script>
+        const input = document.getElementById("taskInput");
+        const list = document.getElementById("taskList");
+        const addBtn = document.getElementById("addTask");
+
+        let editList = null;
+
+
+        function addTask(){
+            if(input.value === ""){
+                alert("please Enter a Task....");
+                return;
+            }
+
+
+            if(editList !== null){
+                editList.querySelector("span").textContent = input.value;
+                addBtn.textContent = "Add Task";
+                editList = null;
+                input.value = "";
+                return;
+            }
+
+            let editBtn = document.createElement("button");
+            editBtn.textContent = "Edit";
+
+            let removeBtn = document.createElement("button");
+            removeBtn.textContent = "Remove";
+
+            let li = document.createElement("li");
+            const span = document.createElement("span");
+            span.textContent = input.value;
+
+
+            editBtn.onclick = function(){
+                input.value = span.textContent;
+                addBtn.textContent = "Edit";
+                editList = li;
+            }
+
+            removeBtn.onclick = function(){
+                list.removeChild(li);
+                input.value = "";
+                addBtn.textContent = "Add Task";
+                editList = null;
+            }
+
+            li.appendChild(span);
+            li.appendChild(editBtn);
+            li.appendChild(removeBtn);
+            list.appendChild(li);
+
+
+            input.value = "";
+        }
+    </script>
+</body>
+</html>

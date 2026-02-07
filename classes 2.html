@@ -1,0 +1,482 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // Question1***
+        class student {
+
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            myself(){
+                console.log(`hello my name is ${this.name} and i am ${this.age} year old...`)
+            }
+        }
+            let student1 = new student("namrata" ,15)
+            let student2 = new student("vandana",18)    
+
+        student1.myself();
+        student2.myself();
+
+
+        //Question 2****
+        class car {
+            
+            constructor(make,model){
+                this.make=make;
+                this.model=model;
+                
+            }
+
+            start(){
+                console.log(`The ${this.make} ${this.model} is already running.`);
+
+            }
+        }
+
+        let car1 = new car("Toyota","camry")
+        let car2 = new car("Honda" , "civic")
+
+        car1.start();
+        car2.start();
+
+        //question no 3*****
+        class person {
+            constructor(name,age,gender){
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+            intro(){
+                console.log(`My Name is ${this.name} and i am ${this.age} years old and  i am ${this.gender}`)
+            }
+        }
+
+        let person1 = new person ("vandana" ,18,"ladki") 
+        let person2 = new person ("gurleen",17,"ladki")
+        let person3 = new person ("namrata",16,"ladki")
+ 
+        person1.intro();
+        person2.intro();
+        person3.intro();
+
+
+        //question no 4 ******
+
+        class mobile{
+            constructor(brand,price){
+                this.brand=brand;
+                this.price=price;
+            }
+
+            phone(){
+                console.log(`this ${this.brand} phone is at ${this.price} this price`)
+            }
+        }
+            let mobile1 = new mobile("iphone" ,16500000)
+            let mobile2 = new mobile("vivo",9000000 )   
+
+        mobile1.phone();
+        mobile2.phone();
+
+        // Question no 5****
+
+        class animal{
+            constructor(name){
+                this.name=name;
+            }     
+                sounds(){
+                    console.log(`this sound of animal is ${this.name}`)
+                }
+            }
+let animal1 = new animal("dev ji ");
+
+    animal1.sounds();
+
+
+        // Question no 6***
+
+        class employees{
+            constructor (name,id,salary){
+                this.name = name;
+                this.id = id;
+                this.salary = salary;
+            }
+             insaan(){
+                console.log(`my name is ${this.name} and my id ${this.id} and my salary ${this.salary}`)
+             }
+        }
+            
+         let insaan1 = new employees ("namrata",123456789,"2lakhs");
+         let insaan2 = new employees ("dev",1234567890,"5lakhs");
+
+
+         insaan1.insaan();
+         insaan2.insaan();
+        
+
+
+// question no 7 ****
+
+         class rectangle {
+            constructor(l,b){
+                this.l = l;
+                this.b = b;
+
+            }
+
+            perimeter(){
+                console.log(`the perimeter of rectangle is ${2*this.l*this.b}`)
+            }
+            area(){
+            console.log(` the area of rectangle is ${this.l*this.b}`)
+            }
+        }
+
+        let triangle = new rectangle(20,40);
+        triangle.area();
+        triangle.perimeter();
+
+
+
+
+//question no 8 ******
+
+       class bankAccount{
+       constructor(accountNumber,balance){
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+       }
+
+       deposit(amount){
+        this.balance += amount;
+        console.log(`${amount} has been deposited. Current Balance is ${this.balance}`);
+       }
+
+
+       widthrew(amount){
+        this.balance -= amount;
+        console.log(`${amount} has been withdrew. Current Balance is ${this.balance}`);
+
+       }
+
+
+       } 
+
+
+       let IDBI = new  bankAccount(7878987874,20000);
+       
+       IDBI.deposit(10000);
+       IDBI.widthrew(15000);
+
+
+
+    // QUESTION 9***
+
+
+       class book{
+        constructor(objects){
+            this.objects = objects;
+
+        }
+
+        book1(){
+            console.log(`By book published ${this.objects} `)
+        }
+
+    
+        book2(){
+            console.log(`By book published ${this.objects} `)
+        } 
+       }
+
+       var kitaab = new book("The heart Theif by")
+       var kitaabe = new book("The heart theif by")
+       kitaab.book1();
+       kitaabe.book2()
+           
+//question no 10****
+       
+       class user {
+        constructor (username,status){
+            this.username = username;
+            this.status = status;
+        }
+        checkstatus(){
+            switch(this.status){
+                case `active`:
+                console.log(`${this.username} is currently active.`);
+                break;
+                case `inactive`:
+                console.log(`${this.username} is currently inactive and cannot access services.`);
+              break ;
+              case `pending`:
+                console.log(`${this.username} is account is pending approval`);
+                default:
+                    console.log(`${this.username} has an unknown stuatus: ${this.status}`);
+        }
+        
+       }
+       }
+
+       let user1 = new user("namrata", "inactive");
+
+       user1.checkstatus();
+     
+
+    //    Question no. 11
+
+    class parent{
+        
+        name(){
+            console.log("parent name is ABC")
+        }
+
+        age(){
+            console.log("parent age is 34")
+        }
+    }
+      
+    class child extends parent{
+
+        height(){
+            console.log("child height is 0.2ft")
+        }
+    }
+    
+
+    let child2 = new child();
+    child2.height();
+    child2.age()
+    
+
+
+
+    // QUESTION 12***
+
+
+    class overide{
+       
+         speak1(){
+            console.log("The animal makes a sound");
+        }
+        
+    }
+
+    class ride extends overide {
+        speak(){
+            console.log("the dog barks");
+        }
+    }
+    let ride1 = new ride();
+
+    ride1.speak1();      
+    ride1.speak();
+        
+//question no 13******
+
+class teacher {
+    study1(){
+        console.log(`she is a science teacher`);
+    }
+
+}
+
+class pepole extends teacher {
+    study(){
+        console.log(`he is best student`);
+    }
+}
+let pepole5 = new pepole();
+
+pepole5.study();
+pepole5.study1();
+
+
+//question no 14****
+
+class shape {
+ circle(){
+    console.log(`its is a circle`)
+
+ }
+
+}
+
+class subclasses extends shape {
+    square(){
+        console.log(`its is a square`)
+    }
+}
+
+let subclasses1 = new  subclasses ();
+subclasses1.circle();
+subclasses1.square();
+
+//question no 15****
+
+class age {
+    constructor( width,height){
+        this.width = width;
+        this.height = height;
+    }
+
+    area(){
+        console.log(this.width*this.height)
+}
+}
+
+let age1 = new age(10,5)
+age1.area();
+
+
+//question no 16*****
+
+  class money {
+       constructor(accountNumber,balance){
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+       }
+
+       deposit(amount){
+        this.balance += amount;
+        console.log(`${amount} has been deposited. Current Balance is ${this.balance}`);
+       }
+
+
+       widthrew(amount){
+        this.balance -= amount;
+        console.log(`${amount} has been withdrew. Current Balance is ${this.balance}`);
+
+       }
+
+
+       } 
+
+
+       let SBI = new  money (7878987874,20000);
+       
+       SBI.deposit(20000);
+       SBI.widthrew(18000);
+
+
+       //question no 17*****
+
+
+       class man{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        greet(){
+            console.log(`HELLO MY NAME IS ${this.name}`);
+        }
+
+        static isAdult(){
+            return age >= 18;
+        }
+       }
+ 
+       let man1 = new man ("alice",22);
+       man1.greet();
+
+       console.log(man.isAdult(user1.age));
+
+//question no 18***
+
+class speak {
+    animal(){
+        console.log("the animal makes a sounds");
+    }
+}
+
+class cat extends speak{
+     animal1(){
+        console.log("the cat is very cute")
+    }
+}
+
+let speak1 = new speak();
+let cat1 = new cat ();
+ 
+speak1.animal();
+cat1.animal1();
+
+
+//question no 19*****
+
+
+class Self {
+    constructor(name,age,gender){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+    intro(){
+        console.log(`My name is ${this.name}. i am ${this.age} year's old and i am ${this.gender}`)
+    }
+    
+
+
+}
+
+
+
+let self = [
+    new Self("namrata",10,"female"),
+    new Self("vandana",18,"female"),
+    new Self("samridhi",5,"female")
+];
+
+
+self.forEach(intro => {
+    console.log(intro)
+});
+
+
+
+
+//question no 20****
+
+
+
+
+    class LOGINSYSTEM {
+        constructor (username,password){
+            this.username = username;
+            this.password = password;
+        }
+        checkstatus(){
+            switch(this.password){
+                case `active`:
+                console.log(`${this.username} is currently active.`);
+                break;
+                case `inactive`:
+                console.log(`${this.username} is currently inactive and cannot access services.`);
+              break ;
+             case `pending`:
+             console.log(`${this.username} is account is pending approval`);
+     default:
+     console.log(`${this.username} has an unknown stuatus: ${this.password}`);
+        }
+        
+       }
+       }
+
+       let login = new LOGINSYSTEM("namrata","active");
+       login.checkstatus();
+
+
+
+</script>
+</body>
+</html>

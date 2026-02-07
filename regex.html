@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+
+
+
+
+<script>
+
+const validateEmail = (email) =>{
+    return /^[A-Za-z0-9]+(?:[.%_+][A-Za-z0-9]+)*@[A-Za-z0-9]+\.[A-Za-z]{2,}$/.test(email);
+}
+
+console.log(validateEmail("namrata452007@gmail.com"));
+
+console.log(validateEmail("namrata452007@gmail.com"));
+console.log(validateEmail("namrata@gmail.com"));
+console.log(validateEmail("namrata452007@gmailcom"));
+
+</script> 
+
+<script>
+
+const validatePassword = (password) => {
+    return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$/.test(password);
+
+}
+
+console.log(validatePassword("Secure@$123!3"));
+console.log(validatePassword("Weakpassword123"));
+
+
+
+</script>
+
+
+<script>
+
+
+const validateUserName = (username) => {
+ return /^(?![._])(?!.*[._]{2})[A-Za-z0-9._@#*]{3,15}(?<![._])$/.test(username)
+
+}
+
+console.log(validateUserName("Namrata123._"));
+
+
+</script>
+
+
+
+<script>
+
+
+const validateUsername = (Username) => {
+    return /^(?![_.])(?:[@])[A-Za-z0-9]{3,10}$/.test(Username)
+
+}
+
+console.log(validateUsername("Namrata11"));
+
+console.log(validateUsername("_.Namrata11"));
+console.log(validateUsername("Namrata11."));
+console.log(validateUsername("@Namrata11"));
+
+
+
+
+</script>
+
+
+
+<script>
+    
+const validateid = (id) => {
+    return /^(?=.*[./])[A-Za-z0-9./]{3,15}$/.test(id)
+}
+console.log(validateid(".yadava708"));
+
+console.log(validateid("yadava708"));
+console.log(validateid(".yadava708"));
+
+
+</script>
+
+<script>
+
+const validateUserNameid = (userid) => {
+    return /^(?![#*_.$&]{2})[A-Za-z0-9@]{3,20}$/.test(userid)
+}
+console.log(validateUserNameid("Armansir22"));
+console.log(validateUserNameid("@Armansir22"));
+console.log(validateUserNameid("..Armansir22"));
+console.log(validateUserNameid("Armansir22@"));
+console.log(validateUserNameid("#Armansir22"));
+
+
+</script>
+
+
+<script>
+    
+const validatedata = (data) => {
+    return /^(\d{4})-(\d{2})-(\d{2})$/.test(data)
+}
+console.log(validatedata("2026-01-15"));
+console.log(validatedata("2026-0-5"));
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

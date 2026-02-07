@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        <!-- question no.8 -->
+
+          class bankAccount{
+       constructor(accountNumber,balance){
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+       }
+
+       deposit(amount){
+        this.balance += amount;
+        console.log(`${amount} has been deposited. Current Balance is ${this.balance}`);
+       }
+
+
+       widthrew(amount){
+        this.balance -= amount;
+        console.log(`${amount} has been withdrew. Current Balance is ${this.balance}`);
+
+       }
+
+
+       } 
+
+
+       let IDBI = new  bankAccount(7878987874,20000);
+       
+       IDBI.deposit(10000);
+       IDBI.widthrew(15000);
+
+    </script>
+</body>
+</html>

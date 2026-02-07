@@ -1,0 +1,227 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let x= 2
+        let y =4
+let sum =(x+y)
+        console.log(sum)
+
+        let num = 4
+        if(num % 2 !==0){
+            console.log("odd");
+        }
+        else{
+        console.log("even")
+        }
+
+        let number = 5
+        if(number >= 1){
+            console.log("positive")
+        }
+else if(number == 0){
+    console.log("0")
+}
+       else{
+        console.log("negative")
+        
+        }
+
+        for(let i = 1; i <= 10;i++){
+            console.log(i);
+        }
+
+        // how can you add elements to an array?
+
+        let fruits = ["apple","banana"];
+        fruits.push("mango");
+        console.log(fruits);
+         
+
+        let fruit = ['orange','kiwi','grapes'];
+        fruit.unshift('apple');
+        console.log(fruit);
+        
+        // // how can you remove elements from an array?
+
+        let name =["namrata","avantika"];
+        name.pop();
+        console.log(name);
+        let names =["namrata","avantika"];
+        names.shift();
+        console.log(names);
+
+        // // what is the length property of an array?
+
+        let vegetable =["potato","tomato"]
+        console.log(vegetable.length);
+        vegetable.push("peas");
+        console.log(vegetable.length);
+
+        // // how do you check if a variable is an array?
+
+        let vegetables =["potato","tomato"]
+        let text = 'onion';
+        console.log(Array.isArray(vegetables));
+        console.log(Array.isArray(text));
+
+        // // how do you iterate over an array?
+
+        let fruitss= ["apple","orange","mango"]
+        for(let i = 0 ; i < fruitss.length; i++){
+            console.log(fruitss[i]);
+        }
+        
+        // // how do you use the foreach method?
+
+        let fru= ["apple","orange","mango"];
+        fru.forEach((fru,index) =>{
+            console.log(`fru ${index+1}: ${fru}`);
+        });
+
+        // // what is the difference between for...of and for..in loops in array?
+
+        let frui= ["apple","orange","mango"]
+        for(let fruit of frui){
+            console.log(fruit);
+        }
+        for(let index in frui){
+            console.log (index);
+        }
+
+        // how do you concatenate two arrays?
+
+        // let fruit =["apple","mango","banana"]
+        // let morefruit =[`cheery`,`grapes`];
+        // let allfruit1 = fruit.concat(morefruit);
+        // let allfruit2 = [... fruit, ...morefruit];
+        // console.log(allfruit2)
+
+        //explain the map//
+
+        // let numbers = [1,2,3,4,5];
+        // let doubled = numbers.map(num => num*2);
+        // console.log(doubled);
+        // console.log(numbers);
+
+        // //filter method work??
+
+        // let number = [1,2,3,4,5];
+        // let oddnumber = number.filter(num => num% 2!==0);
+        // console.log(oddnumber);
+
+        //  what is the purpose of the find method
+        // let numbers = [1,2,3,4,5];
+        // let found = numbers.find(num => num < 3);
+        // console.log(found);
+
+        // how do you use the some method
+
+        //  let numbers = [1,2,3,4,5];
+        //  let hasEven = numbers.some(num => num % 2 === 2);
+        //  console.log(hasEven);
+
+        //includes method
+
+        // let fruits = ["apple","mango"," cherry"];
+        // console.log(fruits.includes("mango"));
+        // console.log(fruits.includes("grapes"));
+        
+        // let fruit = ["apple","mango", "mango"," cherry"];
+        // console.log(fruits.indexOf("mango"));
+        // console.log(fruits.indexOf("grapes"));
+
+        //explain the splice method with an example??
+
+    //    let fruit = ["apple","banana","cherry","dragonfruits","elderberry","figs","guava"];
+    //    fruit.splice(1,0 ,"hami melon","iiama");
+    //    console.log(fruit);
+
+
+    
+    //    let fruit = ["apple","banana","cherry","dragonfruits","elderberry","figs","guava"];
+    //    let fruitstring = fruit.join(',  ')
+    //    console.log(fruitstring);
+
+       //what is array destructuring and how does it5 work ?
+
+       
+    //    let fruit = ["apple","banana","cherry","dragonfruits","elderberry","figs","guava"];
+    //     let [first,second]= fruit;
+    //     console.log(first,second);
+
+    //     let [a,b,c,d,e,f,g = `default`] = fruit;
+    //     console.log(d);
+
+//how do you copy an array??
+
+
+       let fruitt = ["apple","banana","cherry","dragonfruits","elderberry","figs","guava"];
+       let copy1 = [...fruit];
+       let copy2 =Array.from(fruit);
+       console.log(copy1);
+       console.log(copy2);
+
+    // explain the flat method.
+
+    let nested = [1,[2,3,4,5]];
+    let flat1 = nested.flat();
+    console.log(flat1); 
+
+    let flat2 = nested.flat(Infinity);
+    console.log(flat2);
+
+    // how does the flatmap method work?
+
+    let counting = [1,2,3,4,5];
+    let result = counting.flatMap(num=>[num,num *2]);
+    console.log(result);
+
+    // what is the Array.from method and howis it used?
+
+    let str = 'hello';
+    let strArray = Array.from (str);
+    console.log(strArray);
+
+    let set = new Set([1,2,3]);
+    let setArray = Array.from(set, num => num *2);
+    console.log(setArray);
+
+    //explain the fill method with an example.
+
+    let numbe = [10,2,30,50,4];
+    numbe.sort();
+        console.log(numbe);
+
+        numbe.sort((a,b) => a-b);
+        console.log(numbe);
+
+        // what is the reverse method and how is it used?
+
+        let fr = ['apple','banana','cherry']
+        fr.reverse();
+        console.log(fr);
+
+
+        // how do you merge two arrays and remove duplicates?
+
+        let array1 = [1,2,3,4,5,6,7,8,9,10];
+        let array2 = [1,2,3,4,5,6,7,8,9,14,18,17,10];
+        let mergeArray =[...new Set([...array1,...array2])];
+        console.log(mergeArray);
+         
+
+        //complete//
+
+        
+ </script>
+
+
+</body>
+</html>

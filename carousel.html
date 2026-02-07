@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel in js</title>
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+    <div id="img">
+        <img src="back1122.webp" alt="">
+    </div>
+    <div class="carousel">
+
+        <div class="slides">
+            <img src="panda.webp" alt="" class="slide active">
+            <img src="pic.webp" alt="" class="slide">
+            <img src="pic2.jpg" alt="" class="slide">
+            <img src="pic3.webp" alt="" class="slide">
+            <img src="pic4.avif" alt="" class="slide">
+        </div>
+        <button class=" btn prev"> prev</button>
+        <button class="btn next"> next</button>
+ </div>
+
+ <script>
+    const slides = document.querySelectorAll(".slide");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn= document.querySelector(".prev");
+    
+    let currentIndex = 0;
+
+    let autoSlide;
+
+    function showSlide(index){
+        slides.forEach(slide => slide.classList.remove("active"));
+        slides[index].classList.add("active");
+    } 
+
+    function nextSlide(){
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    function prevSlide(){
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    }
+    nextBtn.addEventListener("click",nextSlide);
+    prevBtn.addEventListener("click",prevSlide);
+
+    function startAutoSlide(){
+        autoSlide = setInterval(nextSlide,500)
+        };
+
+    function stopAutoSlide(){
+        clearInterval(autoSlide);
+    }
+
+    startAutoSlide();
+
+    document.querySelector(".carousel").addEventListener("mouseenter",stopAutoSlide);
+    document.querySelector(".carousel").addEventListener("mouseleave",startAutoSlide);
+    
+ </script>
+
+</body>
+</html>

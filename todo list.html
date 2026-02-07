@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="to.css">
+</head>
+<body id="body">
+  
+    <div class ="container">
+    <h2 id="heading">To Do List</h2>
+    <input type="text" id="taskInput" placeholder="Enter your task">
+    <button onclick="addtask()">add</button>
+    <ul id="tasklist"></ul>
+</div>
+    
+    <script>
+        function addtask(){
+            const input = document.getElementById("taskInput");
+            const list = document.getElementById("tasklist");
+
+            if(input.value === ""){
+                alert("please enter your task ...")
+                return;
+            }
+
+            const li =document.createElement("li");
+           const span =document.createElement("span");
+           span.textContent= input.value;
+            // li.textContent = input.value;
+
+                // edit button//
+
+            const editbtn =document.createElement("button");
+            editbtn.textContent = "Edit button";
+
+            editbtn.onclick = function(){
+                const newTask = prompt("Enter your task",span.textContent);
+                if(newTask !== null && newTask !== ""){
+                    span.textContent = newTask;
+                }
+
+            }
+
+
+            const btn = document.createElement("button");
+            btn.textContent= "Remove";
+
+            btn.onclick = function(){
+                list.removeChild(li);
+            }
+            li.appendChild(span);
+            li.appendChild(btn);
+            li.appendChild(editbtn);
+            list.appendChild(li);
+
+            input.value ="";
+        }
+    </script>
+</body>
+</html>
