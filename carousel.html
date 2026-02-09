@@ -23,6 +23,7 @@
  </div>
 
  <script>
+
     const slides = document.querySelectorAll(".slide");
     const nextBtn = document.querySelector(".next");
     const prevBtn= document.querySelector(".prev");
@@ -49,7 +50,7 @@
     prevBtn.addEventListener("click",prevSlide);
 
     function startAutoSlide(){
-        autoSlide = setInterval(nextSlide,500)
+        autoSlide = setInterval(nextSlide,1000)
         };
 
     function stopAutoSlide(){
